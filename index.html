@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Memory Card Game</h1>
+      <p>Find all the pairs before the timer runs out!</p>
+    </header>
+
+    <div class="settings">
+      <button id="set-timer" class="cute-button">⏳ Set Timer</button>
+      <button id="start-game" class="cute-button" disabled>🎮 Start Game</button>
+    </div>
+
+    <div class="stats">
+      <div>
+        <p>🌀 Moves</p>
+        <span id="moves-count">0</span>
+      </div>
+      <div>
+        <p>⏰ Time Left</p>
+        <span id="timer">02:00</span>
+      </div>
+    </div>
+
+    <div id="game-board"></div>
+
+    <button id="restart" class="cute-button">🔄 Restart Game</button>
+  </div>
+
+  <!-- Timer Modal -->
+  <div id="timer-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Select Timer</h2>
+      <div class="time-options">
+        <button class="time-option cute-button" data-time="1">1 Minute</button>
+        <button class="time-option cute-button" data-time="2">2 Minutes</button>
+        <button class="time-option cute-button" data-time="3">3 Minutes</button>
+        <button class="time-option cute-button" data-time="5">5 Minutes</button>
+        <button class="time-option cute-button" data-time="10">10 Minutes</button>
+      </div>
+      <button id="close-timer-modal" class="cute-button">Close</button>
+    </div>
+  </div>
+
+  <!-- Result Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <p id="result-message"></p>
+      <button id="play-again" class="cute-button">🎉 Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
